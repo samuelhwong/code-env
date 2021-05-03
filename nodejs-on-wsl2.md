@@ -1,10 +1,8 @@
-# Node.js
-
-## WSL2
+# Node.js on WSL2
 
 Note: These steps are done after [installing WSL2](wsl2.md)
 
-### Install NVM
+## Install NVM
 
 Reference: https://github.com/nvm-sh/nvm
 
@@ -30,7 +28,7 @@ node -> stable (-> N/A) (default)
 unstable -> N/A (default)
 ```
 
-### Install Node.js
+## Install Node.js
 
 To install the LTS version:
 ```
