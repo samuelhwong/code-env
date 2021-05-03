@@ -17,3 +17,11 @@ Some manual steps will allow you to run WSL2 without being on an Insiders Window
 ## Dual-booting Hyper-V on/off
 
 TODO
+
+## Visual studio code integration
+
+VSC has integration with WSL2. From within a WSL2 terminal, type:
+```
+code .
+```
+to open the current working directory in VSC. Reads/writes to WSL2 are handled transparently.
