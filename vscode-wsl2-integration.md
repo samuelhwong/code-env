@@ -2,7 +2,7 @@
 
 ## Basic
 
-VSC has integration with WSL2. From within a WSL2 terminal, type:
+VSCode has integration with WSL2. From within a WSL2 terminal, type:
 ```
 code .
 ```
