@@ -1,6 +1,6 @@
 # Node.js
 
-## Windows
+## WSL2
 
 Note: These steps are done after [installing WSL2](wsl2.md)
 
