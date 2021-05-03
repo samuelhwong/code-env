@@ -19,4 +19,6 @@ Notes on setting up a coding environment
 
 ## Mac
 
+## Personal preferences
 
+* [Windows Terminal customizations](windows-terminal-customizations.md)
