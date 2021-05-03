@@ -32,3 +32,25 @@ unstable -> N/A (default)
 
 ### Install Node.js
 
+To install the LTS version:
+```
+nvm install --lts
+```
+
+To verify the install is good, run:
+```
+node -v
+```
+which should print out the version. Something like this:
+```
+v14.16.1
+```
+
+Also, run:
+```
+npm -v
+```
+which should print out something like this:
+```
+6.14.12
+```
