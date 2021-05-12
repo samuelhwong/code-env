@@ -2,7 +2,16 @@
 
 Note: These steps are done after [installing WSL2](wsl2.md)
 
-## Install NVM
+## Install via asdf
+
+```
+asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
+asdf install nodejs 14.17.0
+asdf global nodejs 14.17.0
+```
+
+## Install via NVM
 
 Reference: https://github.com/nvm-sh/nvm
 
@@ -28,9 +37,7 @@ node -> stable (-> N/A) (default)
 unstable -> N/A (default)
 ```
 
-## Install Node.js
-
-To install the LTS version:
+To install the LTS version of node:
 ```
 nvm install --lts
 ```

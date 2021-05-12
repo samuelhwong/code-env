@@ -14,10 +14,23 @@ Reference: https://www.omgubuntu.co.uk/how-to-install-wsl2-on-windows-10
 
 Some manual steps will allow you to run WSL2 without being on an Insiders Windows build.
 
-## How to get rid of the dang terminal bell
+## Memory leak workaround
 
-The terminal bell dings every time bash does a partial completion, or I type an invalid `vim` command. It's dinging annoying. To disable it, we'll make a change to Terminal's [settings.json](../src/mnt/c/Users/samuel/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json).
+Set the maximum memory for WSL2. See [.wslconfig](../src/mnt/c/Users/samuel/.wslconfig).
 
+```
+[wsl2]
+memory=6GB
+```
+
+Create an alias that frees up memory. See [.bash_aliases](../src/.bash_aliases).
+
+```
+# This is specific to WSL 2. If the WSL 2 VM goes rogue and decides not to free
+# up memory, this command will free your memory after about 20-30 seconds.
+#   Details: https://github.com/microsoft/WSL/issues/4166#issuecomment-628493643
+alias drop_cache="sudo sh -c \"echo 3 >'/proc/sys/vm/drop_caches' && swapoff -a && swapon -a && printf '\n%s\n' 'Ram-cache and Swap Cleared'\""
+```
 
 ## Dual-booting Hyper-V on/off
 
